@@ -31,6 +31,71 @@ a:not([href]):hover {
 }
 
 .App {
+  color: rgb(var(--color-dark));
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(var(--color-offwhite));
+  padding: 20px;
+}
+
+.bg {
+  background-image: url(./assets/symphony.png);
+  background-blend-mode: multiply;
+}
+
+.App-Container {
+  background-color: rgb(var(--color-offwhite));
+  height: 100%;
+  width: 100%;
+  box-shadow: 10px 10px 20px rgb(var(--color-medium));
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.Button-Row {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.Button-Row-Small{
+  justify-content:flex-end;
+}
+
+.Quote-Box > p {
+  color: rgb(var(--color-dark));
+  text-shadow: 3px 3px 5px  rgb(var(--color-medium));
+  font-size:2em;
+  font-family: 'Lobster', cursive;
+  text-align: justify;
+}
+
+.btn-small {
+  background-color: rgb(var(--color-dark));
+  width: auto;
+  margin: 1px;
+  text-align:center;
+  padding: 5px;
+  font-weight:bold;
+  border-radius:3px;
+  font-size:20px;
+  
+}
+
+.Quote-Author {
+  font-weight:bold;
+}
+/* Bootstrap Fix */
+
+.row {
+  margin: 0px;
+}
+
+/* Non - Mobile */
+@media only screen and (min-width: 600px) {
+  
+.App {
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -41,13 +106,10 @@ a:not([href]):hover {
   align-items: center;
 }
 
-.bg {
-  background-image: url(assets/symphony.png);
-  background-blend-mode: multiply;
-}
 
 .App-Container {
   min-height: 25vh;
+  max-height:40vh;
   width: 60vw;
   min-width: 600px;
   box-shadow: 10px 10px 20px rgb(var(--color-medium));
@@ -61,6 +123,8 @@ a:not([href]):hover {
 .Quote-Box {
   text-align: justify;
   text-shadow: 1px 1px 5px rgb(var(--color-dark));
+  font-size:15px;
+  font-style: normal;
 }
 
 .Quote-Box > p {
@@ -76,7 +140,6 @@ a:not([href]):hover {
   background-color: rgb(var(--color-dark));
   box-shadow: none;
   border: none;
-  margin: 0px 10px;
   color: rgb(var(--color-offwhite));
   border-radius: 3px;
   -webkit-user-select: none; /* Chrome all / Safari all */
@@ -84,6 +147,7 @@ a:not([href]):hover {
   -ms-user-select: none; /* IE 10+ */
   user-select: none;
   padding: 5px;
+  margin:10px;
 }
 
 .btn-small:hover {
@@ -93,62 +157,4 @@ a:not([href]):hover {
 .btn-small:focus {
   outline: none;
 }
-
-/* FIXING BOOTSTRAP */
-
-.row {
-  margin: 0px;
-}
-
-/* Phone Fix */
-
-@media only screen and (max-width: 600px) {
-  .App {
-    margin:0px;
-    padding:0px;
-    max-width: 100vw;
-    max-height:100vh;
-    
-  }
-  .App-Container {
-    width:100px;
-    height:90vh;
-    margin:0px;
-    padding:0px;
-  }
-
-  
-.Quote-Box {
-  font-size:2em;
-  text-align: justify;
-  text-shadow: 1px 1px 5px rgb(var(--color-dark));
-  margin:0px;
-  padding:0px;
- 
-}
-
-.Quote-Box > p {
-  font-style: italic;
-}
-
-.Quote-Author {
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-#text {
-  width: 100vw;
-}
-
-.ButtonRow {
-  display:flex;
-  flex-direction:column;
-  width:100%;
-}
-
-.btn-small {
-  text-align:center;
-  width: 100%;
-}
-
 }
