@@ -1,38 +1,154 @@
+:root {
+  --color-offwhite: 237, 236, 242;
+  --color-dark: 95, 76, 69;
+  --color-medium: 168, 152, 152;
+  --color-contrast: 175, 213, 222;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  overflow: none;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  padding: 0px;
+  margin: 0px;
+  font-size: 16px;
+}
+
+a,
+a:active,
+a:hover,
+a:not([href]),
+a:not([href]):hover {
+  text-decoration: none;
+  color: rgb(var(--color-offwhite));
+  cursor: pointer;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  overflow: auto;
+  color: rgb(var(--color-dark));
+  background-color: rgb(var(--color-offwhite));
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.bg {
+  background-image: url(assets/symphony.png);
+  background-blend-mode: multiply;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.App-Container {
+  min-height: 25vh;
+  width: 60vw;
+  min-width: 600px;
+  box-shadow: 10px 10px 20px rgb(var(--color-medium));
+  background-color: rgb(var(--color-offwhite));
+  padding: 10px 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.Quote-Box {
+  text-align: justify;
+  text-shadow: 1px 1px 5px rgb(var(--color-dark));
+}
+
+.Quote-Box > p {
+  font-style: italic;
+}
+
+.Quote-Author {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.btn-small {
+  background-color: rgb(var(--color-dark));
+  box-shadow: none;
+  border: none;
+  margin: 0px 10px;
+  color: rgb(var(--color-offwhite));
+  border-radius: 3px;
+  -webkit-user-select: none; /* Chrome all / Safari all */
+  -moz-user-select: none; /* Firefox all */
+  -ms-user-select: none; /* IE 10+ */
+  user-select: none;
+  padding: 5px;
+}
+
+.btn-small:hover {
+  transform: scale(1.1);
+}
+
+.btn-small:focus {
+  outline: none;
+}
+
+/* FIXING BOOTSTRAP */
+
+.row {
+  margin: 0px;
+}
+
+/* Phone Fix */
+
+@media only screen and (max-width: 600px) {
+  .App {
+    margin:0px;
+    padding:0px;
+    max-width: 100vw;
+    max-height:100vh;
+    
   }
-  to {
-    transform: rotate(360deg);
+  .App-Container {
+    width:100px;
+    height:90vh;
+    margin:0px;
+    padding:0px;
   }
+
+  
+.Quote-Box {
+  font-size:2em;
+  text-align: justify;
+  text-shadow: 1px 1px 5px rgb(var(--color-dark));
+  margin:0px;
+  padding:0px;
+ 
+}
+
+.Quote-Box > p {
+  font-style: italic;
+}
+
+.Quote-Author {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+#text {
+  width: 100vw;
+}
+
+.ButtonRow {
+  display:flex;
+  flex-direction:column;
+  width:100%;
+}
+
+.btn-small {
+  text-align:center;
+  width: 100%;
+}
+
 }
