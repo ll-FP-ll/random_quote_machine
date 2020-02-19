@@ -10,7 +10,7 @@
 }
 
 html {
-  overflow: none;
+  overflow: auto;
 }
 
 body {
@@ -39,7 +39,7 @@ a:not([href]):hover {
 }
 
 .bg {
-  background-image: url(./assets/symphony.png);
+  background-image: url(https://starai.uber.space/projects/FCC/RandomQuote/static/media/symphony.fcb1692c.png);
   background-blend-mode: multiply;
 }
 
@@ -66,7 +66,7 @@ a:not([href]):hover {
 .Quote-Box > p {
   color: rgb(var(--color-dark));
   text-shadow: 3px 3px 5px  rgb(var(--color-medium));
-  font-size:2em;
+  font-size:3vh;
   font-family: 'Lobster', cursive;
   text-align: justify;
 }
@@ -93,7 +93,7 @@ a:not([href]):hover {
 }
 
 /* Non - Mobile */
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 600px ) {
   
 .App {
   height: 100vh;
